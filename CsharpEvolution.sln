@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsharpEvolution", "src\Char
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsharpEvolution.WeeklyChallenges", "src\CsharpEvolution.WeeklyChallenges\CsharpEvolution.WeeklyChallenges.csproj", "{226B4795-485D-4458-8AD6-81925222D705}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7BD3E1E7-7505-4EE4-B731-6A34081C4C26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{226B4795-485D-4458-8AD6-81925222D705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{226B4795-485D-4458-8AD6-81925222D705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{226B4795-485D-4458-8AD6-81925222D705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD3E1E7-7505-4EE4-B731-6A34081C4C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD3E1E7-7505-4EE4-B731-6A34081C4C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD3E1E7-7505-4EE4-B731-6A34081C4C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD3E1E7-7505-4EE4-B731-6A34081C4C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

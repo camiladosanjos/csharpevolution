@@ -9,7 +9,7 @@ namespace CharpEvolution
         {
             //Test01
             var calculator = new CalculadoraSimples();
-            calculator.ReadConsoleAndCalculate();
+            calculator.ReadConsole();
         }
     }
 }
