@@ -6,9 +6,9 @@ namespace CsharpEvolution.Tests01
 {
     public class SquareRootCalculate : ICalculate
     {
-        public double Calculate(double firstNumber, double secondNumber = 0)
+        public double Calculate(Options options)
         {
-            return Math.Sqrt(firstNumber);
+            return Math.Sqrt(options.FirstNumber);
         }
     }
 }

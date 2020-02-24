@@ -6,9 +6,9 @@ namespace CsharpEvolution.Tests01
 {
     public class DivideCalculate : ICalculate
     {
-        public double Calculate(double firstNumber, double secondNumber)
+        public double Calculate(Options options)
         {
-            return firstNumber/secondNumber;
+            return options.FirstNumber/options.SecondNumber;
         }
     }
 }

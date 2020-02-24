@@ -6,9 +6,9 @@ namespace CsharpEvolution.Tests01
 {
     public class PotentiationCalculate : ICalculate
     {
-        public double Calculate(double firstNumber, double secondNumber)
+        public double Calculate(Options options)
         {
-            return Math.Pow(firstNumber, secondNumber);
+            return Math.Pow(options.FirstNumber, options.SecondNumber);
         }
     }
 }

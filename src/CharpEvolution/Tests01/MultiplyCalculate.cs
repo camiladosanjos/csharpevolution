@@ -6,9 +6,9 @@ namespace CsharpEvolution.Tests01
 {
     public class MultiplyCalculate : ICalculate
     {
-        public double Calculate(double firstNumber, double secondNumber)
+        public double Calculate(Options options)
         {
-            return firstNumber * secondNumber;
+            return options.FirstNumber * options.SecondNumber;
         }
     }
 }

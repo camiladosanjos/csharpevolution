@@ -13,25 +13,25 @@ namespace CsharpEvolution.Tests01
             switch (options.logicalOperator)
             {
                 case 1:
-                    result = new SumCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                    result = new SumCalculate().Calculate(options);
                     break;
                 case 2:
-                    result = new SubstractCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                    result = new SubstractCalculate().Calculate(options);
                     break;
                 case 3:
                     if (options.SecondNumber == 0)
                         throw new Exception();
                     else
-                        result = new DivideCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                        result = new DivideCalculate().Calculate(options);
                     break;
                 case 4:
-                    result = new MultiplyCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                    result = new MultiplyCalculate().Calculate(options);
                     break;
                 case 5:
-                    result = new PotentiationCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                    result = new PotentiationCalculate().Calculate(options);
                     break;
                 case 6:
-                    result = new SquareRootCalculate().Calculate(options.FirstNumber);
+                    result = new SquareRootCalculate().Calculate(options);
                     break;
             }
 
