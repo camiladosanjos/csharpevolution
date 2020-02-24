@@ -32,19 +32,19 @@ namespace CsharpEvolution.Tests01
             switch (logicalOperator)
             {
                 case 1:
-                    result = firstNumber + secondNumber;
+                    result = new SumCalculate().Calculate(firstNumber, secondNumber);
                     break;
                 case 2:
-                    result = firstNumber - secondNumber;
+                    result = new SubstractCalculate().Calculate(firstNumber, secondNumber);
                     break;
                 case 3:
                     if (secondNumber == 0)
                         throw new Exception();
                     else
-                        result = firstNumber / secondNumber;
+                        result = new DivideCalculate().Calculate(firstNumber, secondNumber);
                     break;
                 case 4:
-                    result = firstNumber * secondNumber;
+                    result = new MultiplyCalculate().Calculate(firstNumber, secondNumber);
                     break;
             }
             Console.WriteLine("O resultado da operação é: " + result);

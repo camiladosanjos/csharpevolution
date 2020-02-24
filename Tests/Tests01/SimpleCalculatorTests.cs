@@ -6,16 +6,6 @@ namespace Tests
 {
     public class SimpleCalculatorTests
     {
-        //somar dois números inteiros 
-        //somar dois números com casas decimais 
-        //subtrair dois números inteiros 
-        //subtrair dois números com casas decimais
-        //dividir dois números inteiros 
-        //dividir dois números com casas decimais
-        //divisão por zero
-        //multiplicar dois números inteiros
-        //multiplicar dois números com casas decimais
-
         [Fact]
         public void Sum_two_whole_numbers()
         {
