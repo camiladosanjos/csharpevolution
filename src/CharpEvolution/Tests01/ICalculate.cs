@@ -6,6 +6,6 @@ namespace CsharpEvolution.Tests01
 {
     public interface ICalculate
     {
-        double Calculate(double firstNumber, double secondNumber);
+        double Calculate(double firstNumber, double secondNumber = 0);
     }
 }

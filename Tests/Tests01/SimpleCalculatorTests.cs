@@ -9,87 +9,183 @@ namespace Tests
         [Fact]
         public void Sum_two_whole_numbers()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(1, 5, 1);
-            var expectancy = 6;
+            var options = new Options()
+            {
+                FirstNumber = 1,
+                SecondNumber = 5,
+                logicalOperator = 1
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 6;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Sum_two_numbers_to_decimal_places()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(1.5, 0.5, 1);
-            var expectancy = 2;
+            var options = new Options()
+            {
+                FirstNumber = 1.5,
+                SecondNumber = 0.5,
+                logicalOperator = 1
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 2;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Subtract_two_whole_numbers()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(8, 3, 2);
-            var expectancy = 5;
+            var options = new Options()
+            {
+                FirstNumber = 8,
+                SecondNumber = 3,
+                logicalOperator = 2
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 5;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Subtract_two_numbers_to_decimal_places()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(1.5, 0.5, 2);
-            var expectancy = 1;
+            var options = new Options()
+            {
+                FirstNumber = 1.5,
+                SecondNumber = 0.5,
+                logicalOperator = 2
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 1;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Divide_two_whole_numbers()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(10, 2, 3);
-            var expectancy = 5;
+            var options = new Options()
+            {
+                FirstNumber = 10,
+                SecondNumber = 2,
+                logicalOperator = 3
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 5;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Divide_two_numbers_to_decimal_places()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(11.3, 0.5, 3);
-            var expectancy = 22.6;
+            var options = new Options()
+            {
+                FirstNumber = 11.3,
+                SecondNumber = 0.5,
+                logicalOperator = 3
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 22.6;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Divide_by_zero_shall_exception()
         {
-            Assert.Throws<Exception>(() => new CalculadoraSimples().Calculate(1, 0, 3));
+            var options = new Options()
+            {
+                FirstNumber = 1,
+                SecondNumber = 0,
+                logicalOperator = 3
+            };
+
+            Assert.Throws<Exception>(() => new CalculadoraSimples().Calculate(options));
         }
 
         [Fact]
         public void Multiply_two_whole_numbers()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(66, 8, 4);
-            var expectancy = 528;
+            var options = new Options()
+            {
+                FirstNumber = 66,
+                SecondNumber = 8,
+                logicalOperator = 4
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 528;
+
+            Assert.Equal(resultFound, expected);
         }
 
         [Fact]
         public void Multiply_two_numbers_to_decimal_places()
         {
-            var calculator = new CalculadoraSimples();
-            var resultFound = calculator.Calculate(8.3, 9.3, 4);
-            var expectancy = 77.19000000000001;
+            var options = new Options()
+            {
+                FirstNumber = 8.3,
+                SecondNumber = 9.4,
+                logicalOperator = 4
+            };
 
-            Assert.Equal(resultFound, expectancy);
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 78.02000000000001;
+
+            Assert.Equal(resultFound, expected); 
+        }
+        //Todo
+        [Fact]
+        public void Potentiation_two_whole_numbers()
+        {
+            var options = new Options()
+            {
+                FirstNumber = 5,
+                SecondNumber = 4,
+                logicalOperator = 5
+            };
+
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 625;
+
+            Assert.Equal(resultFound, expected);
+        }
+
+        [Fact]
+        public void SquareRoot()
+        {
+            var options = new Options()
+            {
+                FirstNumber = 5,
+                logicalOperator = 6
+            };
+
+            var calculator = new CalculadoraSimples();
+            var resultFound = calculator.Calculate(options);
+            var expected = 2.23606797749979;
+
+            Assert.Equal(resultFound, expected);
         }
     }
 }

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace CsharpEvolution.Tests01
 {
-    public class SubstractCalculate : ICalculate
+    public class PotentiationCalculate : ICalculate
     {
         public double Calculate(double firstNumber, double secondNumber)
         {
-            return firstNumber - secondNumber;
+            return Math.Pow(firstNumber, secondNumber);
         }
     }
 }

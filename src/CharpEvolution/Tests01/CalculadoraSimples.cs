@@ -6,48 +6,35 @@ namespace CsharpEvolution.Tests01
 {
     public class CalculadoraSimples
     {
-        public void ReadConsole()
-        {
-            Console.WriteLine("Enter the first number");
-            var firstNumber = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the second number");
-            var secondNumber = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Type 1 to SUM");
-            Console.WriteLine("Type 2 to SUBTRACT");
-            Console.WriteLine("Type 3 to DIVIDE");
-            Console.WriteLine("Type 4 to MULTIPLY");
-            Console.WriteLine("Type 5 to exit");
-
-            var logicalOperator = int.Parse(Console.ReadLine());
-
-            Calculate(firstNumber, secondNumber, logicalOperator);
-        }
-
-        public double Calculate(double firstNumber, double secondNumber, int logicalOperator)
+        public double Calculate(Options options)
         {
             double result = 0;
 
-            switch (logicalOperator)
+            switch (options.logicalOperator)
             {
                 case 1:
-                    result = new SumCalculate().Calculate(firstNumber, secondNumber);
+                    result = new SumCalculate().Calculate(options.FirstNumber, options.SecondNumber);
                     break;
                 case 2:
-                    result = new SubstractCalculate().Calculate(firstNumber, secondNumber);
+                    result = new SubstractCalculate().Calculate(options.FirstNumber, options.SecondNumber);
                     break;
                 case 3:
-                    if (secondNumber == 0)
+                    if (options.SecondNumber == 0)
                         throw new Exception();
                     else
-                        result = new DivideCalculate().Calculate(firstNumber, secondNumber);
+                        result = new DivideCalculate().Calculate(options.FirstNumber, options.SecondNumber);
                     break;
                 case 4:
-                    result = new MultiplyCalculate().Calculate(firstNumber, secondNumber);
+                    result = new MultiplyCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                    break;
+                case 5:
+                    result = new PotentiationCalculate().Calculate(options.FirstNumber, options.SecondNumber);
+                    break;
+                case 6:
+                    result = new SquareRootCalculate().Calculate(options.FirstNumber);
                     break;
             }
-            Console.WriteLine("O resultado da operação é: " + result);
+
             return result;
         }
     }
