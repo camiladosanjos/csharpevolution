@@ -8,34 +8,26 @@ namespace CsharpEvolution.Tests01
     {
         public double Calculate(Options options)
         {
-            double result = 0;
-
             switch (options.logicalOperator)
             {
                 case 1:
-                    result = new SumCalculate().Calculate(options);
-                    break;
+                    return new SumCalculate().Calculate(options);
                 case 2:
-                    result = new SubstractCalculate().Calculate(options);
-                    break;
+                    return new SubstractCalculate().Calculate(options);
                 case 3:
                     if (options.SecondNumber == 0)
                         throw new Exception();
                     else
-                        result = new DivideCalculate().Calculate(options);
-                    break;
+                        return new DivideCalculate().Calculate(options);
                 case 4:
-                    result = new MultiplyCalculate().Calculate(options);
-                    break;
+                    return new MultiplyCalculate().Calculate(options);
                 case 5:
-                    result = new PotentiationCalculate().Calculate(options);
-                    break;
+                    return new PotentiationCalculate().Calculate(options);
                 case 6:
-                    result = new SquareRootCalculate().Calculate(options);
-                    break;
+                    return new SquareRootCalculate().Calculate(options);
             }
 
-            return result;
+            return 0;
         }
     }
 }
